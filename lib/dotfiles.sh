@@ -1,6 +1,5 @@
 #!/bin/bash
 $DOTFILES="$HOME/.dotfiles"
-$DROPBOX="$HOME/Dropbox"
 
 if [ ! -d $DOTFILES ]; then
   echo "dotfiles directory does not exist cloning now..."
@@ -51,11 +50,4 @@ if [ ! -d $DOTFILES ]; then
 
   echo "Make tat script executable..."
   chmod +x $DOTFILES/tmux/tat
-fi
-
-if [ -d $DROPBOX ]; then
-  echo "Link Dropbox my-wiki"
-  ln -s $DROPBOX/my-wiki $HOME/my-wiki
-else
-  tput setaf 1; echo "Please download Dropbox and restart setup.sh"
 fi
